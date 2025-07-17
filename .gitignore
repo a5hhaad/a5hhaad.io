@@ -1,4 +1,4 @@
-﻿# Dependencies
+# Dependencies
 node_modules/
 /.pnp
 .pnp.js
@@ -7,7 +7,7 @@ node_modules/
 /coverage
 
 # Production
-/build
+# /build  # Commented out for GitHub Pages deployment
 
 # Misc
 .DS_Store
