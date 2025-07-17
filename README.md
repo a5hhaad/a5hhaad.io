@@ -2,7 +2,7 @@
 
 Welcome to my portfolio website! This project showcases my skills, projects, and experiences as a DevOps Engineer.
 
-**Weblink**: [Live Website](https://a5hhaad.io/)
+**Weblink**: [Live Website](https://a5hhaad.github.io/)
 
 ![Portfolio Preview](./src/images/HeroImage.jpg)
 
@@ -63,8 +63,8 @@ My portfolio is a React.js application that serves as an interactive showcase of
 
 To run this portfolio locally, follow these steps:
 
-1. **Clone the repository**: git clone https://github.com/a5hhaad/a5hhaad.io.git
-2. **Navigate to the project directory**: cd a5hhaad.io
+1. **Clone the repository**: git clone https://github.com/a5hhaad/a5hhaad.github.io.git
+2. **Navigate to the project directory**: cd a5hhaad.github.io
 3. **Install the dependencies**: 
 pm install
 4. **Start the development server**: 
@@ -83,7 +83,7 @@ This portfolio is deployed using GitHub Pages. To deploy any updates:
 2. Build the project: 
 pm run build
 3. Deploy to GitHub Pages
-4. Visit your live site at https://a5hhaad.io
+4. Visit your live site at https://a5hhaad.github.io/
 
 ## Contact
 
