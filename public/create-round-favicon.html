@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Round Favicon Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    .instructions {
+      background-color: #f8f9fa;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+    .preview {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px 0;
+    }
+    #canvas {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+    button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    a {
+      color: #2196F3;
+    }
+    .code-block {
+      background-color: #f1f1f1;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>Round Favicon Generator</h1>
+  
+  <div class="instructions">
+    <p>Follow these steps to create and use a rounded favicon for your website:</p>
+    <ol>
+      <li>Click the "Generate Rounded Favicon" button below</li>
+      <li>Download the rounded favicon image</li>
+      <li>Replace your original favicon with this new rounded version</li>
+    </ol>
+  </div>
+  
+  <div class="preview">
+    <canvas id="canvas" width="128" height="128"></canvas>
+    <button id="generate">Generate Rounded Favicon</button>
+    <a id="download" href="#" download="favicon.png" style="display:none;">Download Rounded Favicon</a>
+  </div>
+  
+  <div id="instructions" style="display:none;">
+    <h2>How to use your new favicon</h2>
+    <p>Place the downloaded favicon.png file in your public folder and update your index.html to use it:</p>
+    <pre class="code-block">&lt;link rel="icon" href="%PUBLIC_URL%/favicon.png" /&gt;</pre>
+    <p>Add this line to replace apple-touch-icon as well:</p>
+    <pre class="code-block">&lt;link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.png" /&gt;</pre>
+  </div>
+
+  <script>
+    document.getElementById('generate').addEventListener('click', function() {
+      const canvas = document.getElementById('canvas');
+      const ctx = canvas.getContext('2d');
+      const size = canvas.width;
+      
+      // Load the HeroImage
+      const img = new Image();
+      img.crossOrigin = 'anonymous';
+      img.src = 'HeroImage.jpg'; // This should be the path to your HeroImage.jpg
+      
+      img.onload = function() {
+        // Clear canvas
+        ctx.clearRect(0, 0, size, size);
+        
+        // Create circular clipping path
+        ctx.beginPath();
+        ctx.arc(size/2, size/2, size/2, 0, 2 * Math.PI);
+        ctx.closePath();
+        ctx.clip();
+        
+        // Draw the image
+        ctx.drawImage(img, 0, 0, size, size);
+        
+        // Add a white border
+        ctx.strokeStyle = '#ffffff';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.arc(size/2, size/2, size/2 - 1, 0, 2 * Math.PI);
+        ctx.stroke();
+        
+        // Enable and update the download link
+        const downloadLink = document.getElementById('download');
+        downloadLink.href = canvas.toDataURL('image/png');
+        downloadLink.style.display = 'inline-block';
+        
+        // Show instructions
+        document.getElementById('instructions').style.display = 'block';
+      };
+    });
+  </script>
+</body>
+</html>
