@@ -80,10 +80,9 @@ After installing and running the project locally, you can navigate through the d
 This portfolio is deployed using GitHub Pages. To deploy any updates:
 
 1. Make your changes to the codebase
-2. Build the project: 
-pm run build
-3. Deploy to GitHub Pages
-4. Visit your live site at https://a5hhaad.github.io/
+2. Build and deploy: 
+pm run deploy
+3. Visit your live site at https://a5hhaad.github.io/
 
 ## Contact
 
