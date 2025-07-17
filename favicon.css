@@ -1,0 +1,7 @@
+/* Round favicon styling */
+link[rel="icon"] {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* Apply a circular mask using favicons.js */
