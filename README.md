@@ -59,40 +59,6 @@ My portfolio is a React.js application that serves as an interactive showcase of
 - **Git & GitHub**: Version control and code collaboration
 - **FormSubmit.co**: For handling contact form submissions
 
-## Installation
-
-To run this portfolio locally, follow these steps:
-
-1. **Clone the repository**: git clone https://github.com/a5hhaad/a5hhaad.github.io.git
-2. **Navigate to the project directory**: cd a5hhaad.github.io
-3. **Install the dependencies**: 
-pm install
-4. **Start the development server**: 
-pm start
-5. **Open your browser and visit**: http://localhost:3000
-
-## Usage
-
-After installing and running the project locally, you can navigate through the different sections of the portfolio using the navigation menu. Explore the About Me section to learn more about my DevOps background and skills. Visit the Projects section to see detailed information about my infrastructure, automation, and cloud projects. Use the Contact section to send me a message or inquiry.
-
-## Deployment
-
-This portfolio is deployed using GitHub Pages. To deploy any updates:
-
-1. Make your changes to the codebase
-2. Build and deploy: 
-pm run deploy
-3. Visit your live site at https://a5hhaad.github.io/
-
-## Contact
-
-If you have any questions or would like to get in touch, feel free to reach out:
-
-- **Email**: mdashhaad@gmail.com
-- **GitHub**: [@a5hhaad](https://github.com/a5hhaad)
-- **LinkedIn**: [Md Ashhaad](https://www.linkedin.com/in/md-ashhaad/)
-- **LeetCode**: [a5hhaad](https://leetcode.com/a5hhaad/)
-
 ## License
 
 This project is licensed under the MIT License.
